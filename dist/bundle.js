@@ -1,1 +1,0 @@
-(()=>{var e=document.getElementById("theme-switch"),t=document.getElementById("theme-switch-light"),c=document.getElementById("theme-switch-dark");e.onclick=function(){"active"===t.className?(t.className="",c.className="active",document.body.className="dark"):(t.className="active",c.className="",document.body.className="light")}})();
