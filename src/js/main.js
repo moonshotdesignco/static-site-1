@@ -1,15 +1,22 @@
-let ts = document.getElementById("theme-switch");
-let tsl = document.getElementById("theme-switch-light");
-let tsd = document.getElementById("theme-switch-dark");
+let tsBtn = document.getElementById("theme-switch");
+let tsLblLi = document.getElementById("theme-switch-label-light");
+let tsLblDa = document.getElementById("theme-switch-label-dark");
 
-ts.onclick = function() {
-    if (tsl.className === "active") {
-        tsl.className = "";
-        tsd.className = "active";
+tsBtn.onclick = function() {
+    if (document.body.className == "light") {
         document.body.className = "dark";
+        tsLblLi.classList.remove("active");
+        tsLblDa.classList.add("active");
     } else {
-        tsl.className = "active";
-        tsd.className = "";
         document.body.className = "light";
+        tsLblLi.classList.add("active");
+        tsLblDa.classList.remove("active");
     }
 };
+
+function setTheme() {
+    document.body.className = "light";
+    tsLblLi.classList.add("active");
+}
+
+setTheme();

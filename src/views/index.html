@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onload="setTheme()">
 <head>
     <module href="/components/head.html"></module>
     <title>Static Site</title>
 </head>
-<body class="light">
-    <button id="theme-switch">
-        <span id="theme-switch-light" class="active">light</span> | <span id="theme-switch-dark">dark</span>
-    </button>
+<body>
+    <module href="/components/theme-switch.html"></module>
     <div class="header">
         <h1>ahoy planet</h1>
     </div>
     <div class="main">
-        <p>Welcome to static-site-1.</p>
+        <module href="/components/main-content.html"></module>
     </div>
     <div class="footer">
-        <module href="/components/designedby.html"></module>
+        <module href="/components/designed-by.html"></module>
         <module href="/components/copyright.html"></module>
     </div>
     <script src="./bundle.js"></script>

@@ -1,0 +1,32 @@
+button#theme-switch {
+    display: block;
+    background: inherit;
+    color: inherit;
+    border: none;
+    padding: 0.5rem 0;
+    font: unset;
+    font-family: $fontStackMono;
+}
+
+.theme-switch-label {
+    padding: 0.5rem;
+    user-select: none;
+    &.active {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+
+#theme-switch-label-light {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    background-color: $secondaryLight;
+    color: $primaryDark;
+}
+
+#theme-switch-label-dark {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    background-color: $secondaryDark;
+    color: $primaryLight;
+}

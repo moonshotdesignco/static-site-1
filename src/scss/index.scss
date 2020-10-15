@@ -1,25 +1,23 @@
-@import "variables.scss";
 @import "reset.scss";
+@import "color.scss";
+@import "font.scss";
+@import "theme-switch.scss";
 
 body {
-    font-family: $fontStack;
+    font-family: $fontStackSans;
+    transition: 300ms linear;
 }
 
-#theme-switch {
-    display: inline-block;
-    background: inherit;
+a {
     color: inherit;
-    border: 1px solid;
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    font: unset;
 }
 
 .light {
     color: $primaryDark;
-    background: $primaryLight;
-    #theme-switch {
-        border-color: $primaryDark;
+    background: $gradientLight;
+    a:hover,
+    a:focus {
+        color: $tertiaryDark;
     }
     .footer {
         color: $secondaryDark;
@@ -28,17 +26,14 @@ body {
 
 .dark {
     color: $primaryLight;
-    background: $primaryDark;
-    #theme-switch {
-        border-color: $primaryLight;
+    background: $gradientDark;
+    a:hover,
+    a:focus {
+        color: $tertiaryLight;
     }
     .footer {
         color: $secondaryLight;
     }
-}
-
-.active {
-    text-decoration: underline;
 }
 
 .header {
@@ -46,6 +41,9 @@ body {
 }
 
 .footer {
+    margin-top: 3rem;
+    border-top: 1px solid;
+    border-right: 1px solid;
     font-size: 0.75rem;
     a {
         color: inherit;
