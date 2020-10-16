@@ -3,7 +3,7 @@
 @import "font.scss";
 @import "theme-switch.scss";
 
-body {
+html, body {
     font-family: $fontStackSans;
     transition: 300ms linear;
 }
@@ -14,7 +14,7 @@ a {
 
 .light {
     color: $primaryDark;
-    background: $gradientLight;
+    background: $primaryLight;
     a:hover,
     a:focus {
         color: $tertiaryDark;
@@ -26,7 +26,7 @@ a {
 
 .dark {
     color: $primaryLight;
-    background: $gradientDark;
+    background: $primaryDark;
     a:hover,
     a:focus {
         color: $tertiaryLight;
@@ -36,14 +36,17 @@ a {
     }
 }
 
+.section {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    margin: 1rem 0;
+}
+
 .header {
     text-transform: uppercase;
 }
 
 .footer {
-    margin-top: 3rem;
-    border-top: 1px solid;
-    border-right: 1px solid;
     font-size: 0.75rem;
     a {
         color: inherit;
