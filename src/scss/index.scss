@@ -5,7 +5,7 @@
 
 html, body {
     font-family: $fontStackSans;
-    transition: 300ms linear;
+    transition: color 400ms linear, background 400ms linear;
 }
 
 a {
@@ -37,18 +37,17 @@ a {
 }
 
 .section {
+    color: inherit;
+    background: inherit;
     border-bottom: 1px solid;
     border-right: 1px solid;
     margin: 1rem 0;
 }
 
-.header {
+.sectionHead {
     text-transform: uppercase;
 }
 
-.footer {
+.sectionFoot {
     font-size: 0.75rem;
-    a {
-        color: inherit;
-    }
 }
